@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html>
 <head>
@@ -50,3 +51,41 @@
   
 </body>
 </html>
+=======
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Test Case Generator</title>
+  <style>
+    body { font-family: Arial; padding: 20px; }
+    textarea { width: 100%; height: 100px; }
+    button { margin-top: 10px; }
+    #output { margin-top: 20px; white-space: pre-wrap; }
+  </style>
+</head>
+<body>
+  <h1>Test Case Generator</h1>
+  <p>Enter your test scenario:</p>
+  <textarea id="scenario"></textarea>
+  <button onclick="generate()">Generate Test Cases</button>
+  <div id="output"></div>
+
+  <script>
+    function generate() {
+      const scenario = document.getElementById('scenario').value;
+      const output = document.getElementById('output');
+      if (!scenario.trim()) {
+        output.innerText = 'Please enter a scenario.';
+        return;
+      }
+      output.innerText = `Test Cases for: ${scenario}\n\n` +
+        `1. Verify ${scenario} with valid input\n` +
+        `2. Check ${scenario} with invalid input\n` +
+        `3. Ensure ${scenario} handles edge cases\n` +
+        `4. Confirm ${scenario} logs errors properly\n` +
+        `5. Validate ${scenario} meets expected output`;
+    }
+  </script>
+</body>
+</html>
+>>>>>>> dec261c79eeec9fa5791919def7f578bbaef8224
